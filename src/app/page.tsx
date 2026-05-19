@@ -95,9 +95,9 @@ export default function Home() {
 
   return (
     //div principal com classes do Tailwind CSS para centralizar e estilizar
-    <div classnome="min-h-screen bg-gray-100 flex flex-col itens-center py-10 px-4">
+    <div className="min-h-screen bg-gray-100 flex flex-col itens-center py-10 px-4">
       {/* Titulo da pagina */}
-      <h1 classnome="text-3xl font-bold text-green-700 mb-6">
+      <h1 className="text-3xl font-bold text-green-700 mb-6">
         Lista de compras NEXT
       </h1>
 
@@ -108,15 +108,15 @@ export default function Home() {
       <ShoppingList
         itens={itens}
         onRemove={lidarRemoveItem}
-        onEdit={lidarEditItem}
-        onToggle={lidarTogglecomprado}
+        onEdit={lidarEditaItem}
+        onToggle={lidarMudaComprado}
       />
 
       {/*Botão de remonta*/}
-      {itens.lenght > 0 && (
+      {itens.length > 0 && (
         <button 
           onClick={lidarRemonta}
-          classnome="mt-6 py-2 bg-red-500 text-while rounded-lg hover:bg-red-600 transition"
+          className="mt-6 py-2 bg-red-500 text-while rounded-lg hover:bg-red-600 transition"
         >
           Remontar lista
         </button>
